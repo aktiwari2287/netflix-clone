@@ -1,10 +1,15 @@
 import './App.css';
+import Banner from './components/Banner';
 import { Row } from './components/Row';
-import {requests} from './requests'
+import {requests} from './requests';
+import Nav from './components/Nav';
+import './components/Nav.css';
 export const App = () => {
   return (
     <div className="App">
-      <Row title="Animated Movies" fetchUrl={requests.fetchAnimation}></Row>
+      <Nav></Nav>
+      <Banner></Banner>
+      <Row title="Animated Movies" fetchUrl={requests.fetchAnimation} isLargeRow={true}></Row>
       <Row title="Science-Fiction Movies" fetchUrl={requests.fetchSciFi}></Row>
       <Row title="Action Movies" fetchUrl={requests.fetchActionMovies}></Row>
       <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}></Row>
